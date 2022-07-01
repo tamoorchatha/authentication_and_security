@@ -13,14 +13,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.connect("mongodb://localhost:27017/secretsDB");
 
 const registerSchema = new mongoose.Schema({
-  email: {
-    type: String,
-    required: [true, "plz enter the gmail"],
-  },
-  password: {
-    type: String,
-    required: [true, "plz enter the password"],
-  },
+//   email: {
+//     type: String,
+//     required: [true, "plz enter the gmail"],
+//   },
+//   password: {
+//     type: String,
+//     required: [true, "plz enter the password"],
+//   },
+    email: String,
+    password: String,
 });
 
 const User = mongoose.model("User", registerSchema);
